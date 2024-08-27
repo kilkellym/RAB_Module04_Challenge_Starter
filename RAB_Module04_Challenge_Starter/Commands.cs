@@ -1,4 +1,9 @@
 ﻿using System.Text;
+using Autodesk.Revit.Attributes;
+using Autodesk.Revit.DB;
+using Autodesk.Revit.UI;
+using System;
+using System.Diagnostics;
 
 namespace RAB_Module04_Challenge_Starter
 {
@@ -83,7 +88,6 @@ namespace RAB_Module04_Challenge_Starter
 			return Result.Succeeded;
 		}
 	}
-
 	public static class Message
 	{
 		public static string HiddenMessage;
