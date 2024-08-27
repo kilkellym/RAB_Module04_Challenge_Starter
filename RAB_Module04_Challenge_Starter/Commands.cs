@@ -17,6 +17,9 @@ namespace RAB_Module04_Challenge_Starter
 			return Result.Succeeded;
 		}
 	}
+	//--------------------------------------
+
+	[Transaction(TransactionMode.Manual)]
 	public class cmd2 : IExternalCommand
 	{
 		public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
@@ -25,6 +28,9 @@ namespace RAB_Module04_Challenge_Starter
 			return Result.Succeeded;
 		}
 	}
+	//--------------------------------------
+
+	[Transaction(TransactionMode.Manual)]
 	public class cmd10 : IExternalCommand
 	{
 		public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
@@ -33,6 +39,9 @@ namespace RAB_Module04_Challenge_Starter
 			return Result.Succeeded;
 		}
 	}
+	//--------------------------------------
+
+	[Transaction(TransactionMode.Manual)]
 	public class cmd8 : IExternalCommand
 	{
 		public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
@@ -41,14 +50,20 @@ namespace RAB_Module04_Challenge_Starter
 			return Result.Succeeded;
 		}
 	}
+	//--------------------------------------
+
+	[Transaction(TransactionMode.Manual)]
 	public class cmd1 : IExternalCommand
 	{
 		public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
 		{
-			Message.SetMessage("You ");
+			Message.SetMessage("You");
 			return Result.Succeeded;
 		}
 	}
+	//--------------------------------------
+
+	[Transaction(TransactionMode.Manual)]
 	public class cmd7 : IExternalCommand
 	{
 		public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
@@ -57,6 +72,9 @@ namespace RAB_Module04_Challenge_Starter
 			return Result.Succeeded;
 		}
 	}
+	//--------------------------------------
+
+	[Transaction(TransactionMode.Manual)]
 	public class cmd5 : IExternalCommand
 	{
 		public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
@@ -65,6 +83,9 @@ namespace RAB_Module04_Challenge_Starter
 			return Result.Succeeded;
 		}
 	}
+	//--------------------------------------
+
+	[Transaction(TransactionMode.Manual)]
 	public class cmd3 : IExternalCommand
 	{
 		public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
@@ -73,6 +94,9 @@ namespace RAB_Module04_Challenge_Starter
 			return Result.Succeeded;
 		}
 	}
+	//--------------------------------------
+
+	[Transaction(TransactionMode.Manual)]
 	public class cmd9 : IExternalCommand
 	{
 		public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
@@ -81,6 +105,9 @@ namespace RAB_Module04_Challenge_Starter
 			return Result.Succeeded;
 		}
 	}
+	//--------------------------------------
+
+	[Transaction(TransactionMode.Manual)]
 	public class cmd6 : IExternalCommand
 	{
 		public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
@@ -89,6 +116,7 @@ namespace RAB_Module04_Challenge_Starter
 			return Result.Succeeded;
 		}
 	}
+	//--------------------------------------
 	public static class Message
 	{
 		public static string HiddenMessage;
@@ -100,13 +128,16 @@ namespace RAB_Module04_Challenge_Starter
 
 			string message = "";
 			if(counter == 10)
-				message = "You found the hidden message! Message = " + HiddenMessage;
+			{
+				message = "The message is: '" + HiddenMessage + "'";
+				counter = 0;
+				HiddenMessage = "";
+			}
 			else
 				message = "You found word number " + counter.ToString();
 			
 			TaskDialog.Show("Scavenger Hunt!", message);
 		}
 	}
-
 
 }
