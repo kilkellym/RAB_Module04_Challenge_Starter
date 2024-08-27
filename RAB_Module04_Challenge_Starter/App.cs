@@ -12,13 +12,13 @@ namespace RAB_Module04_Challenge_Starter
 	{
 		public Result OnStartup(UIControlledApplication app)
 		{
+			// write you ribbon code here
 
 			return Result.Succeeded;
 		}
 
 		public Result OnShutdown(UIControlledApplication a)
 		{
-
 			return Result.Succeeded;
 		}
 	}
