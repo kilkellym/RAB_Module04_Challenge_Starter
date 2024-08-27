@@ -122,7 +122,7 @@ namespace RAB_Module04_Challenge_Starter
 
 			// 7. Add pull down button
 			PulldownButtonData pulldownButtonData = new PulldownButtonData("pulldownBtn", "More Tools");
-			pulldownButtonData.Image = ConvertToImageSource(Properties.Resources.Green_32);
+			pulldownButtonData.LargeImage = ConvertToImageSource(Properties.Resources.Green_32);
 
 			PulldownButton pulldownButton = panel.AddItem(pulldownButtonData) as PulldownButton;
 			pulldownButton.AddPushButton(buttonData8);
