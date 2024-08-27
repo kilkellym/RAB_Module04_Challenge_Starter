@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>RAB_Module04_Challenge_Starter</Name>
+    <Assembly>RAB_Module04_Challenge_Starter\RAB_Module04_Challenge_Starter.dll</Assembly>
+    <FullClassName>RAB_Module04_Challenge_Starter.App</FullClassName>
+    <ClientId>0a0e0c62-0d30-498a-9a75-197d86f2bc43</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+</RevitAddIns>
